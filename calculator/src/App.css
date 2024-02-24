@@ -28,4 +28,8 @@
   .result{
     border:solid 2px black;
   }
+  .calculator-body{
+    width:500px;
+    border: solid 1px black;
+  }
   
