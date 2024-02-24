@@ -77,7 +77,7 @@ function App() {
   };
  function equals(e){
     e.preventDefault();
-    inputRef.value = resultRef.value; 
+    setResult((result) => result + 0); 
   }
   function resetInput(e) { 
     // Add the code for the resetInput function 
@@ -101,18 +101,19 @@ function App() {
         <h1>Simplest Working Calculator</h1> 
       </div> 
       <div className="calculator-body">
+        <h1 className="logo">Reactio</h1>
         <form> 
           <p className="result" ref={resultRef}> 
             {result} 
           </p> 
-          {/* <input
+          <input
             pattern="[0-9]" 
             ref={inputRef} 
             onChange={handleChange} 
             type="number" 
             placeholder="Type a number" 
             value={input==null? '' : input}
-          />  */}
+          />  
 
           {
             <button onClick={plus} aria-valuetext="Add">+</button>
