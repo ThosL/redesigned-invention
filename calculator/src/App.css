@@ -20,16 +20,28 @@
     background: whitesmoke;
     margin-right: 5px;
   }
-  button:nth-last-child(2),
+  /*button:nth-last-child(2),
   button:nth-last-child(1) {
     background: tomato;
     color: white;
-  }
+  }*/
   .result{
-    border:solid 2px black;
+    border:solid 3px black;
+    border-radius:6px;
+    font-size: larger;
+    padding:2.5%;
+    margin:5%;
+
+
   }
   .calculator-body{
     width:500px;
     border: solid 1px black;
+    padding:2.5%;
+    margin:5%;
+  }
+  .btn-clr{
+    color:white;
+    background-color: tomato;
   }
   

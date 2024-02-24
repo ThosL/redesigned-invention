@@ -105,14 +105,14 @@ function App() {
           <p className="result" ref={resultRef}> 
             {result} 
           </p> 
-          <input
+          {/* <input
             pattern="[0-9]" 
             ref={inputRef} 
             onChange={handleChange} 
             type="number" 
             placeholder="Type a number" 
             value={input==null? '' : input}
-          /> 
+          />  */}
 
           {
             <button onClick={plus} aria-valuetext="Add">+</button>
@@ -131,7 +131,10 @@ function App() {
             <button onClick={equals}>=</button>
           }
           {
-            <button onClick={resetInput}>Clear Mem </button>
+            <button className="btn-clr" onClick={resetInput}>Clr </button>
+          }
+          {
+            <button className="btn-clr" onClick={resetResult}>Clr Mem </button>
           }
           {
             <button onClick={one}>1</button>
