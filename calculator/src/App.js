@@ -75,13 +75,10 @@ function App() {
     e.preventDefault(); 
     setResult((result) => result / Number(inputRef.current.value));  
   };
- function equals(e){
-    e.preventDefault();
-    setResult((result) => result + 0); 
-  }
   function resetInput(e) { 
     // Add the code for the resetInput function 
     e.preventDefault(); 
+    handleChange(null);
   }; 
  
   function resetResult(e) { 
@@ -101,7 +98,6 @@ function App() {
         <h1>Simplest Working Calculator</h1> 
       </div> 
       <div className="calculator-body">
-        <h1 className="logo">Reactio</h1>
         <form> 
           <p className="result" ref={resultRef}> 
             {result} 
@@ -127,9 +123,6 @@ function App() {
           }
           {
             <button onClick={divide}>÷</button>
-          }
-          {
-            <button onClick={equals}>=</button>
           }
           {
             <button className="btn-clr" onClick={resetInput}>Clr </button>
