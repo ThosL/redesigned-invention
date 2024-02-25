@@ -1,6 +1,9 @@
 * {
     font-family: sans-serif;
   }
+  .main-container{
+    width:100%;
+  }
   input,
   button {
     font-size: 20px;
@@ -34,13 +37,44 @@
 
 
   }
-  .calculator-body{
-    width:500px;
-    border: solid 1px black;
-    padding:2.5%;
-    margin:5%;
+
+  .operator{
+    background-color: darkblue;
+    color: white;
+  }
+  .operator:hover{
+    background-color:white;
+    color:black;
   }
   .btn-clr{
     color:white;
     background-color: tomato;
+  } 
+   .calculator-body{
+    width:12%;
+    max-width: 12%;
+    min-width: 12%;
+    border: solid 1px black;
+    padding:2.5%;
+    margin:0px auto;
+
+    display:flex;
+    flex-direction: row;
   }
+  .col-container{
+    display: flex;
+    flex-direction: column;
+    width:100%;
+  }
+  .col-container >div{
+    margin-top:2%;;
+  }
+  .btn-zero{
+    margin-left: 14%;
+  }
+  .btn-divide{
+    margin-left: 15%;
+  }
+
+
+  

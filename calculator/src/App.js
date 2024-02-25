@@ -93,78 +93,93 @@ function App() {
   }
 
   return ( 
-    <div className="App"> 
+    <div className="main-container">
+      <div className="App"> 
       <div> 
-        <h1>Simplest Working Calculator</h1> 
-      </div> 
-      <div className="calculator-body">
-        <form> 
-          <p className="result" ref={resultRef}> 
-            {result} 
-          </p> 
-          <input
-            pattern="[0-9]" 
-            ref={inputRef} 
-            onChange={handleChange} 
-            type="number" 
-            placeholder="Type a number" 
-            value={input==null? '' : input}
-          />  
-
-          {
-            <button onClick={plus} aria-valuetext="Add">+</button>
-          }
-          
-          {
-            <button onClick={minus}>-</button>
-          }
-          {
-            <button onClick={times}>×</button>
-          }
-          {
-            <button onClick={divide}>÷</button>
-          }
-          {
-            <button className="btn-clr" onClick={resetInput}>Clr </button>
-          }
-          {
-            <button className="btn-clr" onClick={resetResult}>Clr Mem </button>
-          }
-          {
-            <button onClick={one}>1</button>
-          }
-          {
-            <button onClick={two}>2</button>
-          }
-          {
-            <button onClick={three}>3</button>
-          }
-          {
-            <button onClick={four}>4</button>
-          }
-          {
-            <button onClick={five}>5</button>
-          }
-          {
-            <button onClick={six}>6</button>
-          }
-          {
-            <button onClick={seven}>7</button>
-          }
-          {
-            <button onClick={eight}>8</button>
-          }
-          {
-            <button onClick={nine}>9</button>
-          }
-          {
-            <button onClick={zero}>0</button>
-          }
-
-        </form> 
-      </div>
-
-    </div> 
+          <h1>Simplest Working Calculator</h1> 
+        </div> 
+        <div className="calculator-body">
+          <form> 
+            <div>
+              <p className="result" ref={resultRef}> 
+                {result} 
+              </p> 
+              </div>
+            <div>
+              <input
+                pattern="[0-9]" 
+                ref={inputRef} 
+                onChange={handleChange} 
+                type="number" 
+                placeholder="Type a number" 
+                value={input==null? '' : input}
+              /> 
+            </div> 
+            <div className="col-container">
+              <div>
+              {
+                <button className="btn-clr" onClick={resetInput}>Clr </button>
+              }
+              {
+                <button className="btn-clr" onClick={resetResult}>Clr Mem </button>
+              }
+              </div>
+              <div>
+              {
+                <button onClick={one}>1</button>
+              }
+              {
+                <button onClick={two}>2</button>
+              }
+              {
+                <button onClick={three}>3</button>
+              }
+              {
+                <button onClick={plus} className="operator">+</button>
+              }
+              </div>
+              <div className="column">
+              {
+                <button onClick={four}>4</button>
+              }
+              {
+                <button onClick={five}>5</button>
+              }
+              {
+                <button onClick={six}>6</button>
+              }
+              {
+                <button onClick={minus} className="operator">−</button>
+              }
+              </div>
+              <div>
+              {
+                <button onClick={seven}>7</button>
+              }
+              {
+                <button onClick={eight}>8</button>
+              }
+              {
+                <button onClick={nine}>9</button>
+              }
+              {
+                <button onClick={times} className="operator">×</button>
+              }
+              </div>
+              <div>
+              {
+                <button className="btn-zero" onClick={zero}>0</button>
+              }
+              {
+                <button onClick={divide} className="operator btn-divide">÷</button>
+              } 
+              </div>          
+            </div>   
+          </form> 
+        </div>
+      </div>  
+    </div>
+ 
   ); 
 } 
  
